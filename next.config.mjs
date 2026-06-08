@@ -1,6 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  /* config options here */
+  transpilePackages: ["@react-pdf/renderer"],
+  experimental: {
+    esmExternals: 'loose',
+  },
 };
 
 export default nextConfig;

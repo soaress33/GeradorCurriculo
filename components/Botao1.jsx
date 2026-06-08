@@ -2,27 +2,15 @@
 
 import dynamic from "next/dynamic";
 
-
-// dados de exemplo (depois podem vir de um formulário)
-import ModeloPDF from "./modelopdf";
-
-// PDFDownloadLink é um componente do @react-pdf/renderer,
-// mas ele não funciona no servidor (Next.js roda parte do código no servidor),
-// então usamos dynamic para carregar ele só no navegador
 const PDFDownloadLink = dynamic(
-  () =>
-    import("@react-pdf/renderer").then(
-      (mod) => mod.PDFDownloadLink
-    ),
+  () => import("@react-pdf/renderer").then((mod) => mod.PDFDownloadLink),
   { ssr: false }
 );
 
+const ModeloPDF = dynamic(() => import("./modelopdf"), { ssr: false });
+
 // MEU COMPONENTE DE BOTÃO PARA BAIXAR O PDF
-export default function BotaoBaixar({
- textoBotao,
- cor,
- 
-}) {
+export default function BotaoBaixar({}) {
 
   return (
     // PDFDownloadLink gera o PDF e cria o link de download

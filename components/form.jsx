@@ -1,17 +1,19 @@
 "use client";
 
+import { useState } from "react";
 import dynamic from "next/dynamic";
 import Link from "next/link";
-import { useState } from "react";
 import Botao1 from "@/components/Botao1";
-import PDFDinamico from "@/components/pdfdinamico";
-
+import PdfDinamico from "@/components/pdfdinamico";
 
 const PDFDownloadLink = dynamic(
-    () => import("@react-pdf/renderer").then((m) => m.PDFDownloadLink),
+    () => import("@react-pdf/renderer").then((mod) => mod.PDFDownloadLink),
     { ssr: false }
-
 );
+
+const PDFDinamico = dynamic(() => import("@/components/pdfdinamico"), {
+    ssr: false,
+});
 
 export default function Form() {
     const [nome, setNome] = useState("");
@@ -19,12 +21,12 @@ export default function Form() {
     const [email, setEmail] = useState("");
     const [habilidades, setHabilidades] = useState("");
 
-    const dados ={
-    nome, 
-    cargo,
-    email, 
-    habilidades,
-};
+    const dados = {
+        nome,
+        cargo,
+        email,
+        habilidades,
+    };
 
 
     return (
@@ -46,7 +48,7 @@ export default function Form() {
                     <h1>Dados do currículo</h1>
                 </div>
                 <div className=" gap-7 justify-center  flex">
-                    <div clasName="bg-green-400">
+                    <div className="">
                         <h1 className="text-lg text-gray-300  font-semibold">Nome</h1>
                         <input
                             value={nome}
@@ -54,7 +56,7 @@ export default function Form() {
                             onChange={(e) => setNome(e.target.value)}
                             placeholder="Marco Silva" className="w-110 rounded-lg h-12 p-2 border"></input>
                     </div>
-                    <div clasName="bg-green-400">
+                    <div className="">
                         <h1 className="text-lg text-gray-300 font-semibold">Cargo</h1>
                         <input
                             type="text"
@@ -65,7 +67,7 @@ export default function Form() {
                 </div>
 
                 <div className=" gap-7 py-5 justify-center  flex">
-                    <div clasName="bg-green-400">
+                    <div className="">
                         <h1 className="text-lg text-gray-300 font-semibold">Email</h1>
                         <input
                             type="email"
@@ -73,7 +75,7 @@ export default function Form() {
                             onChange={(e) => setEmail(e.target.value)}
                             placeholder="marco@gmail.com" className="w-110 p-2 rounded-lg h-12 border"></input>
                     </div>
-                    <div clasName="bg-green-400">
+                    <div className="">
                         <h1 className="text-lg text-gray-300 font-semibold">Habilidades</h1>
                         <input
                             type="text"
@@ -81,16 +83,30 @@ export default function Form() {
                             onChange={(e) => setHabilidades(e.target.value)}
                             placeholder="Pacores Officies, Comunicação" className="w-110 p-2 rounded-lg h-12 border"></input>
                     </div>
+
+                    
                 </div>
+                
             </div>
 
-            <div className="">
+            <div className="px-2">
                 <h1 className="text-black font-semibold text-2xl px-10">Escolha o modelo e baixe</h1>
-                <div className="px-9 p-2">
-                    <PDFDownloadLink document={<PDFDinamico dados={dados} />} fileName="curriculo.pdf"
-                    className="bg-blue-500 text-white py-2 px-4 rounded-md text-center hover:bg-blue-600 transition-colors">
-                        Baixar Currículo
+                <div className="px-10 flex gap-2  p-2">
+                    <PDFDownloadLink document={<PdfDinamico dados={dados} />} fileName="curriculo.pdf"
+                        className="bg-blue-500 p-2 h-10   text-xl pt-2 rounded hover:scale-110 transition-transform text-center text-white"
+                    > Baixar Currículo
+
                     </PDFDownloadLink>
+
+                  <div className="">  
+                    <a href="/">
+                        <button className="bg-red-500 w-40 p-3 items-center font-bold text-2xl  flex justify-center rounded h-9">
+                           Voltar
+                        </button>
+                    </a>
+                    </div>
+
+
                 </div>
             </div>
 
