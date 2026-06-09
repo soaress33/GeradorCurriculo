@@ -1,5 +1,4 @@
 import Image from "next/image";
-
 import VisualizadorPDF from "../components/view";
 import Botao1 from "@/components/Botao1";
 
@@ -28,6 +27,10 @@ export default function Home() {
               Crie seu proprio
             </button>
           </a>
+
+          <Botao1
+          textoBotao="Pdf 1"
+          />
         </div>
 
       </div>

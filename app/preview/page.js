@@ -15,7 +15,7 @@ export default function Preview() {
         height: "100vh",
       }}
     >
-      <Curriculo1 />
+      <PdfDinamico />
     </PDFViewer>
   );
 }

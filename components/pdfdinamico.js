@@ -22,6 +22,20 @@ const estilos = StyleSheet.create({
     fontWeight: "bold",
   },
 
+  cartrilho: {
+    borderWidth: 2,
+    borderColor: "black",
+    width: "100%",
+    height: "200px",
+    padding: 20,
+    gap: 20,
+
+  },
+
+
+
+
+
   linha: {
     borderBottomWidth: 1,
     borderBottomColor: "#999",
@@ -30,12 +44,13 @@ const estilos = StyleSheet.create({
 
   quadrado: {
     borderWidth: 2,
-    borderColor: "red",
+    borderColor: "black",
     alignItems: "center",
     justifyContent: "center",
-    marginBottom: 58,
+    marginBottom: 18,
     flexDirection: "row",
-    gap: 50,
+    padding: 20,
+    gap: 40,
 
   },
 
@@ -56,15 +71,28 @@ const estilos = StyleSheet.create({
 
 
   circulo: {
+    width: 35,
+    height: 35,
+    borderWidth: 2,
+    borderColor: "#444",
+    backgroundColor: "#d9d9d9",
+    borderRadius: 100,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+
+
+  quadrado1: {
     width: 50,
     height: 50,
     borderWidth: 2,
     borderColor: "#444",
     backgroundColor: "#d9d9d9",
-    borderRadius: 50,
+
     justifyContent: "center",
     alignItems: "center",
   },
+
 
   titulo: {
     fontSize: 12,
@@ -83,6 +111,116 @@ const estilos = StyleSheet.create({
 
   },
 
+
+  cardTrilhas: {
+
+    borderWidth: 2,
+    borderColor: "black",
+    width: "100%",
+    height: 300,
+    borderRadius: 10,
+    gap: 20,
+    alignItems: "center",
+    justifyContent: "center",
+
+  },
+
+  trilha: {
+    height: 9,
+    backgroundColor: "#E4E4E7",
+    borderRadius: 5,
+
+  },
+
+  trilhafund1: {
+
+    height: 9,
+    width: "90%",
+    backgroundColor: "red",
+    borderRadius: 5,
+
+  },
+
+  trilhafund2: {
+
+    height: 9,
+    width: "60%",
+    backgroundColor: "red",
+    borderRadius: 5,
+
+  },
+
+  trilhafund3: {
+
+    height: 9,
+    width: "40%",
+    backgroundColor: "red",
+    borderRadius: 5,
+
+  },
+
+
+  cxtrilha1: {
+    borderWidth: 2,
+    borderColor: "black",
+
+  },
+
+  cxtrilha2: {
+    borderWidth: 2,
+    borderColor: "black",
+
+  },
+
+  cxtrilha3: {
+    borderWidth: 2,
+    borderColor: "black",
+
+  },
+
+  cxtrilha4: {
+    borderWidth: 2,
+    borderColor: "black",
+
+  },
+
+  trilhafund4: {
+
+    height: 9,
+    width: "25%",
+    backgroundColor: "red",
+    borderRadius: 5,
+
+  },
+
+  protrilho: {
+    height: 20,
+    width: "70%",
+    borderWidth: 2,
+    borderColor: "black",
+
+  },
+
+  caixa: {
+    borderWidth: 2,
+    borderColor: "black",
+    gap: 10,
+    padding: 20,
+    marginBottom: 18,
+
+  },
+
+    cxlinha: {
+    borderWidth: 2,
+    borderColor: "black",
+    gap: 10,
+    padding: 20,
+    marginBottom: 2,
+
+  },
+
+  
+
   linhaElementos: {
     flexDirection: "row",
     justifyContent: "space-between",
@@ -91,20 +229,28 @@ const estilos = StyleSheet.create({
 
   box: {
     borderWidth: 1,
-    borderColor: "blue",
+    borderColor: "red",
     flexDirection: "row",
-    padding: 10,
-    gap: 5,
+    gap: 15,
+    borderRadius: 6,
+    textAlign: "center",
+    marginBottom: 50,
+  },
+
+  box0: {
+    borderWidth: 1,
+    borderColor: "black",
+    flexDirection: "row",
     borderRadius: 6,
     textAlign: "center",
     marginBottom: 50,
   },
 
 
+
   box3: {
     borderWidth: 1,
     borderColor: "yellow",
-    flexDirection: "row",
     borderRadius: 6,
     textAlign: "center",
     marginBottom: 50,
@@ -113,10 +259,10 @@ const estilos = StyleSheet.create({
 
 
   box00: {
-    borderWidth: 1,
-    borderColor: "green",
-    padding: 10,
+
+    gap: 20,
     textAlign: "center",
+    flexDirection: "row",
 
   },
 
@@ -133,6 +279,47 @@ const estilos = StyleSheet.create({
 
   },
 
+  GG: {
+    borderWidth: 1,
+    borderColor: "pink",
+    height: 150,
+    width: "50%",
+    padding: 10,
+    gap: 15,
+    alignItems: "center",
+    borderRadius: 10,
+    textAlign: "center",
+
+  },
+
+  cxtxt1: {
+    borderWidth: 1,
+    borderColor: "black",
+    height: 110,
+    width: "50%",
+    padding: 10,
+    textAlign: "left",
+
+  },
+
+  cxtxt2: {
+    borderWidth: 1,
+    borderColor: "black",
+    height: 110,
+    width: "50%",
+    textAlign: "left",
+
+  },
+
+  cxtxt3: {
+    borderWidth: 1,
+    borderColor: "black",
+    height: 110,
+    width: "50%",
+    textAlign: "left",
+
+  },
+
 
 
 
@@ -143,15 +330,51 @@ const estilos = StyleSheet.create({
     borderRadius: 6,
     textAlign: "center",
     flexDirection: "row",
-    padding: 20,
-    gap: 18,
+    gap: 30,
+  
+    height: 150,
+    alignItems: "center",
 
   },
 
   texto: {
     fontSize: 11,
-    textAlign: "center",
+    color: "black",
   },
+
+  texto1: {
+    fontSize: 11,
+    color: "black",
+
+  },
+
+  linha1: {
+
+    height: 4,
+    backgroundColor: "#0d9488",
+    borderRadius: 2,
+
+  },
+
+  linha2: {
+
+    height: 4,
+    backgroundColor: "yellow",
+    borderRadius: 2,
+
+  },
+
+  linha3: {
+
+    height: 4,
+    backgroundColor: "blue",
+    borderRadius: 2,
+
+  },
+
+
+
+
 });
 
 export default function PDFelementos() {
@@ -159,26 +382,17 @@ export default function PDFelementos() {
     <Document>
       <Page size="A4" style={estilos.pagina}>
         <View style={estilos.card}>
-
           <View style={estilos.quadrado}>
-
-
-            <View style={estilos.box0}>
-              
-              <View style={estilos.box3}>
-                <View style={estilos.box}>
-                  <View style={estilos.quadrado1}></View>
-                  <View style={estilos.quadrado1}></View>
-                </View>
-
-                <View style={estilos.box}>
-                  <View style={estilos.quadrado1}></View>
-                  <View style={estilos.quadrado1}></View>
-                </View>
+            <View style={estilos.GG}>
+              <View style={estilos.box00}>
+                <View style={estilos.quadrado1}></View>
+                <View style={estilos.quadrado1}></View>
               </View>
 
-
-
+              <View style={estilos.box00}>
+                <View style={estilos.quadrado1}></View>
+                <View style={estilos.quadrado1}></View>
+              </View>
 
             </View>
 
@@ -188,8 +402,87 @@ export default function PDFelementos() {
               <View style={estilos.circulo}></View>
               <View style={estilos.circulo}></View>
             </View>
+          </View>
+
+
+          <View style={estilos.caixa}>
+
+          
+              <Text style={estilos.texto}></Text>
+              <View style={estilos.trilha}>
+                <View style={estilos.trilhafund1} />
+              </View>
+           
+
+            
+              <View style={estilos.trilha}>
+                <View style={estilos.trilhafund2} />
+              </View>
+          
+
+           
+              
+              <View style={estilos.trilha}>
+                <View style={estilos.trilhafund3} />
+              </View>
+
+
+              <View style={estilos.trilha}>
+                <View style={estilos.trilhafund4} />
+              </View>
+            
 
           </View>
+
+          <View style={estilos.quadrado}>
+            <View style={estilos.cxtxt1}>
+              <Text style={estilos.texto1}>A Copa do Mundo de 2026
+                acontece de 11 de junho a 19 de julho. Pela primeira vez,
+                o torneio será realizado em três países-sede: Canadá, Estados
+                Unidos e México. Esta será também a maior edição da história,
+                marcando a estreia do novo formato com 48 seleções
+                e um total de 104 partidas.</Text>
+            </View>
+
+            <View style={estilos.cxtxt2}>
+              <Text style={estilos.texto1}>
+
+                O futebol se popularizou internacionalmente através das Olimpíadas
+                no início do século XX. Para criar um torneio independente, a FIFA
+                idealizou a primeira Copa do Mundo, sediada e
+                vencida pelo Uruguai em 1930, que derrotou a Argentina na final.
+
+              </Text>
+            </View>
+          </View>
+
+          <View style={estilos.quadrado}>
+            <View style={estilos.cxtext3}>
+              <Text style={estilos.texto1}>
+
+                O futebol se popularizou internacionalmente através das Olimpíadas
+                no início do século XX. Para criar um torneio independente, a FIFA
+                idealizou a primeira Copa do Mundo, sediada e
+                vencida pelo Uruguai em 1930, que derrotou a Argentina na final.
+
+              </Text>
+            </View>
+          </View>
+
+
+          <View style={estilos.cxlinha}>
+            <View style={estilos.linha1}></View>
+
+            <View style={estilos.linha2}></View>
+
+            <View style={estilos.linha3}></View>
+
+          </View>
+
+
+
+
+
 
 
 
