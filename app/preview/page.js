@@ -2,6 +2,7 @@
  
 "use client";
  
+import Curriculo1 from "@/components/curriculo1";
 import { PDFViewer } from "@react-pdf/renderer";
 import CurriculoSimples from "@/components/modelopdf";
 import PdfDinamico from "@/components/pdfdinamico";
@@ -14,7 +15,7 @@ export default function Preview() {
         height: "100vh",
       }}
     >
-      <PdfDinamico />
+      <Curriculo1 />
     </PDFViewer>
   );
 }
