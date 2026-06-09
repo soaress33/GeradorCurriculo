@@ -6,6 +6,7 @@ import dynamic from "next/dynamic";
 import Link from "next/link";
 import Botao1 from "@/components/Botao1";
 import PdfDinamico from "@/components/pdfdinamico";
+import PDF1 from "./modelopdf";
 
 const PDFDownloadLink = dynamic(
     () => import("@react-pdf/renderer").then((mod) => mod.PDFDownloadLink),
@@ -34,11 +35,12 @@ export default function Form() {
         <div
             className={`
         w-150
-        bg-slate-200
+       bg-slate-300
         rounded-2xl   
         flex 
         flex-col
         justify-center
+      
          `}
         >
 
@@ -96,7 +98,7 @@ export default function Form() {
                         
                     </h1>
                     <div className="px-10 flex gap-2 justify-between   p-2">
-                        <PDFDownloadLink document={<PdfDinamico dados={dados} />} fileName="curriculo.pdf"
+                        <PDFDownloadLink document={<PDF1 dados={dados} />} fileName="curriculo.pdf"
                             className="bg-blue-500 p-2 h-10 flex  gap-3 text-xl pt-2 rounded hover:scale-110 transition-transform text-center text-white"
                         > Baixar Currículo 
                     <ArrowDownToLine />
