@@ -3,7 +3,6 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import VisualizadorPDF from "../components/view";
 import PDFelementos from "@/components/pdfdinamico";
 import BotaoBaixar from "@/components/Botao1";
 import  Link  from "next/link";
