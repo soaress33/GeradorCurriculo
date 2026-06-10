@@ -1,21 +1,17 @@
-// app/preview/page.js
- 
-"use client";
- 
-import Curriculo1 from "@/components/curriculo1";
-import { PDFViewer } from "@react-pdf/renderer";
-import CurriculoSimples from "@/components/modelopdf";
-import PdfDinamico from "@/components/pdfdinamico";
- 
-export default function Preview() {
+"use client"; 
+
+import dynamic from "next/dynamic";
+
+
+const VisualizadorPDF = dynamic(
+  () => import("../components/view"), 
+  { ssr: false }
+);
+
+export default function PreviewPage() {
   return (
-    <PDFViewer
-      style={{
-        width: "100%",
-        height: "100vh",
-      }}
-    >
-      <PdfDinamico />
-    </PDFViewer>
+    <main>
+      <VisualizadorPDF />
+    </main>
   );
 }

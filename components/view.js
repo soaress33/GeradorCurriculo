@@ -1,15 +1,7 @@
 "use client";
 
-import dynamic from "next/dynamic";
-
-const PDFViewer = dynamic(
-  () => import("@react-pdf/renderer").then((mod) => mod.PDFViewer),
-  { ssr: false }
-);
-
-const PdfDinamico = dynamic(() => import("./pdfdinamico"), {
-  ssr: false,
-});
+import { PDFViewer } from "@react-pdf/renderer";
+import PdfDinamico from "./pdfdinamico";
 
 export default function VisualizadorPDF() {
   return (
