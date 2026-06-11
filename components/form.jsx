@@ -35,19 +35,21 @@ export default function Form() {
         <div
             className={`
         
-        px-1
+        p-5
        bg-slate-300
         rounded-2xl   
         flex 
         flex-col
         justify-center
-        
+        text-black
+                
+
+
          `}
         >
 
 
 
-            <div className="p-4  gap-2 flex flex-col  text-black">
                 <div className="  text-xl md:text-2xl px-5 font-bold text-black">
                     <h1>Dados do Currículo</h1>
                 </div>
@@ -116,7 +118,7 @@ export default function Form() {
 
                     </div>
                 </div>
-            </div>
+          
 
 
 
