@@ -11,21 +11,24 @@ import  Link  from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex flex-col bg-white flex-1 items-center justify-center">
-      <div className="bg-slate-300 shadow-2xl w-200 items-center gap-3  h-full p-10 flex flex-col rounded-lg">
+    <div className="flex w-full h-screen bg-white items-center justify-center">
+
+      <div className="w-full max-w-md flex  items-center justify-center">
+
+      <div className="bg-slate-300 shadow-2xl w-[90%] md:w-200 items-center gap-3  h-full p-10 flex flex-col rounded-lg">
         <div className="py-10 gap-9 text-cyan-600  font-bold items-center flex flex-col">
-          <h1 className="text-3xl">Júnior Soares</h1>
+          <h1 className="text-2xl">Júnior Soares</h1>
           <h3>SENAC - MG</h3>
         </div>
 
-        <div className=" p-3 text-xl text-center w-160 text-cyan-600  font-bold items-center flex flex-col">
+        <div className=" px-46 md:px-0  text-xs md:text-2xl grid-cols-1 text-center w-160 text-cyan-600  font-bold items-center flex flex-col">
           <p>Aula prática de geração de documentos PDF utilizando React, CSS, TailWind e Next.js.
             Neste projeto, criamos um formulário para coletar informações do usuário e gerar um
             currículo personalizado em PDF, explorando conceitos modernos de componentes, estilização
             e exportação de arquivos.</p>
         </div>
 
-        <div className="py-2 flex items-center gap-6   w-full">
+        <div className="py-2 flex items-center gap-6 justify-between  w-full">
          
          <Link 
          href="./gerarpdf"
@@ -44,6 +47,7 @@ export default function Home() {
 
         </div>
 
+      </div>
       </div>
 
 

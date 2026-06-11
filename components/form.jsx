@@ -34,7 +34,8 @@ export default function Form() {
     return (
         <div
             className={`
-        w-150
+        
+        px-1
        bg-slate-300
         rounded-2xl   
         flex 
@@ -47,7 +48,7 @@ export default function Form() {
 
 
             <div className="p-4  gap-2 flex flex-col  text-black">
-                <div className="  text-2xl px-5 font-bold text-black">
+                <div className="  text-xl md:text-2xl px-5 font-bold text-black">
                     <h1>Dados do Currículo</h1>
                 </div>
 
@@ -58,7 +59,7 @@ export default function Form() {
                         value={nome}
                         type="text"
                         onChange={(e) => setNome(e.target.value)}
-                        placeholder="Marco Silva" className="w-120 rounded-lg h-12 p-2 border"></input>
+                        placeholder="Marco Silva" className="w-90 md:w-120 rounded-lg h-12 p-2 border"></input>
                 </div>
                 <div className="">
                     <h1 className="text-lg  font-semibold">Cargo</h1>
@@ -66,7 +67,7 @@ export default function Form() {
                         type="text"
                         value={cargo}
                         onChange={(e) => setCargo(e.target.value)}
-                        placeholder="Jovem Aprendiz" className="w-120 p-2 rounded-lg h-12 border"></input>
+                        placeholder="Jovem Aprendiz" className="w-90 md:w-120 p-2 rounded-lg h-12 border"></input>
                 </div>
 
 
@@ -76,7 +77,7 @@ export default function Form() {
                         type="email"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
-                        placeholder="marco@gmail.com" className="w-120 p-2 rounded-lg h-12 border"></input>
+                        placeholder="marco@gmail.com" className="w-90 md:w-120 p-2 rounded-lg h-12 border"></input>
                 </div>
                 <div className="">
                     <h1 className="text-lg font-semibold">Habilidades</h1>
@@ -84,7 +85,7 @@ export default function Form() {
                         type="text"
                         value={habilidades}
                         onChange={(e) => setHabilidades(e.target.value)}
-                        placeholder="Pacores Officies, Comunicação" className="w-120 p-2 rounded-lg h-12 border"></input>
+                        placeholder="Pacores Officies, Comunicação" className="w-90 md:w-120 p-2 rounded-lg h-12 border"></input>
                 </div>
             </div>  
 
@@ -100,7 +101,7 @@ export default function Form() {
                     <div className="px-10 flex gap-2 justify-between   p-2">
                         <PDFDownloadLink document={<PDF1 dados={dados} />} fileName="curriculo.pdf"
                             className="bg-blue-500 p-2 h-10 flex  gap-3 text-xl pt-2 rounded hover:scale-110 transition-transform text-center text-white"
-                        > Baixar Currículo 
+                        > Baixar 
                     <ArrowDownToLine />
                         </PDFDownloadLink>
 
